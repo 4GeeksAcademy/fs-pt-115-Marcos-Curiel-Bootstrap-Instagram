@@ -1,179 +1,219 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Instagram Feed</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-  </head>
-  <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-md bg-body-tertiary">
-      <div class="container-fluid d-flex">
-        <i class="fa-brands fa-instagram me-1" style="font-size: 30px;"></i>
-        <a class="navbar-brand" href="#"><strong>Instagram</strong></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        
-        <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
-          <form class="d-flex" role="search">
-            <!-- Button Modal -->
-            <button type="button" class="btn btn-success me-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-              Create a new post
-            </button>
 
-            <!-- Modal -->
-            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Create a new post</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="mb-3">
-                      <label for="exampleFormControlTextarea1" class="form-label"><strong>Caption:</strong></label>
-                      <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Add the caption of your post here" rows="3"></textarea>
-                    </div>
-                    <div class="d-flex gap-2">
-                      <button type="button" class="btn btn-outline-secondary text-dark">
-                        <i class="fa-solid fa-camera"></i>
-                      </button>
-                      <button type="button" class="btn btn-outline-secondary text-dark">
-                        <i class="fa-solid fa-location-dot"></i>
-                      </button>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Instagram Feed</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+		integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+</head>
 
-                    </div>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-success">Publish</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Dropdown -->
-            <div class="dropdown-center">
-              <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fa-solid fa-gear"></i>
-              </button>
-              <ul class="dropdown-menu dropdown-menu-end">
-                <li><a class="dropdown-item" href="#">Profile</a></li>
-                <li><a class="dropdown-item" href="#">Accesibility</a></li>
-                <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
-              </ul>
-            </div>
-          </form>
-        </div>
-      </div>
-    </nav>  
-    <!-- Nav-Tab -->
-    <nav>
-      <div class="nav nav-tabs justify-content-center border-0" id="nav-tab" role="tablist">
-        <button class="nav-link active border-0" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true"><i class="fas fa-th"></i></button>
-        <button class="nav-link border-0" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false";><i class="fa-solid fa-square"></i></button>
-      </div>
-    </nav>
-    <!-- PHOTO GRID -->
-    <div class="tab-content" id="nav-tabContent">
-      <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
-        <div class="container-fluid">
-          <div class="row g-1 mb-1">
-            <div class="col-sm-6 col-md-4">
-              <div class="ratio ratio-1x1">
-                <img src="https://royalsperfume.es/cdn/shop/files/61aDAbBVv6L._SL1500.jpg?v=1747650702" alt="" class="w-100 h-100 object-fit-cover">
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-              <div class="ratio ratio-1x1">
-                <img src="https://olfactoryambition.com/wp-content/uploads/2024/02/valentino-uomo-born-in-roma-intense-65bb8856b7e22.webp" alt="" class="w-100 h-100 object-fit-cover">
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-              <div class="ratio ratio-1x1">
-                <img src="https://static3.sabinacdn.com/50184-thickbox_default/le-beau-paradise-garden-eau-de-parfum-jean-paul-gaultier.jpg" alt="" class="w-100 h-100 object-fit-cover">
-              </div>
-            </div>
-          </div>
-          <div class="row g-1 mb-1">
-            <div class="col-sm-6 col-md-4">
-              <div class="ratio ratio-1x1">
-                <img src="https://dutyfreemelilla.com/image/cache/catalog/fotosTmp/1571667-1067x1024.jpg" alt="" class="w-100 h-100 object-fit-cover">
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-              <div class="ratio ratio-1x1">
-                <img src="https://i1.perfumesclub.com/grande/193643-2.jpg" alt="" class="w-100 h-100 object-fit-cover">
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-              <div class="ratio ratio-1x1">
-                <img src="https://i1.perfumesclub.com/grande/161136-2.jpg" alt="" class="w-100 h-100 object-fit-cover">
-              </div>
-            </div>
-          </div>
-          <div class="row g-1 mb-1">
-            <div class="col-sm-6 col-md-4">
-              <div class="ratio ratio-1x1">
-                <img src="https://mimadaconsentida.com/wp-content/uploads/2025/02/a522d008-3270-406b-82f4-f186dfb24dee.jpeg" alt="" class="w-100 h-100 object-fit-cover">
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-              <div class="ratio ratio-1x1">
-                <img src="https://img2.miravia.es/g/fb/kf/E659afdd10a4c4e7da79541554ab745e5i.jpg_360x360q75.jpg" alt="" class="w-100 h-100 object-fit-cover">
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-4">
-              <div class="ratio ratio-1x1">
-                <img src="https://fraganzi.com/cdn/shop/files/odysseymandarynskyarmaf100ml.png?v=1743781336" alt="" class="w-100 h-100 object-fit-cover">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-       <!-- Cards -->
-        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
-        <div class="container">
-        <div class="card mx-auto mb-3" style="width: 25rem;">
-            <div class="card-header d-flex justify-content-between">
-            <h5 class="card-title">Vulcan Feu</h5>
-            <p class="">07/06/25</p>
-            </div>
-            <img src="https://royalsperfume.es/cdn/shop/files/61aDAbBVv6L._SL1500.jpg?v=1747650702" class="card-img-top" alt="...">
-            <div class="card-body">
-                <p class="card-text">Liked by <strong>Harry Potter</strong> and<strong> 1.000.000 others.</strong></p>
-                <p>Vulcan Feu de French Avenue es una fragancia unisex intensa y vibrante, clasificada como floral, que combina notas afrutadas, especiadas y amaderadas. Se inspira en la energía de una erupción volcánica, ofreciendo un aroma tropical, especiado y amaderado. Es una fragancia sofisticada y envolvente, ideal para personas que buscan destacar con un aroma audaz. </p>
-            </div>
-        </div>
-            <div class="card mx-auto mb-3" style="width: 25rem;">
-            <div class="card-header d-flex justify-content-between">
-                <h5 class="card-title">Valentino Born in Roma</h5>
-                <p class="">06/06/25</p>
-            </div>
-            <img src="https://olfactoryambition.com/wp-content/uploads/2024/02/valentino-uomo-born-in-roma-intense-65bb8856b7e22.webp" class="card-img-top" alt="...">
-            <div class="card-body">
-                <p class="card-text">Liked by <strong>Rambo</strong> and<strong> 700.000 others.</strong></p>
-                <p>Valentino Born in Roma Uomo es una fragancia amaderada aromática para hombres que evoca la elegancia de Roma, combinando notas profundas y dulces con toques frescos y picantes. La fragancia se caracteriza por la combinación de vetiver, salvia y jengibre, con toques de bergamota y violeta. </p>
-            </div>
-            </div>
-            <div class="card mx-auto" style="width: 25rem;">
-            <div class="card-header d-flex justify-content-between">
-                <h5 class="card-title">Paradise Garden</h5>
-                <p class="">05/06/25</p>
-            </div>
-            <img src="https://i1.perfumesclub.com/grande/193643-2.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <p class="card-text">Liked by <strong>Tarantino</strong> and <strong> 950.000 others.</strong></p>
-                <p>Fragancia sofisticada, floral-exótica, con frescura vibrante y elegancia amaderada duradera.</p>
-            </div>
-            </div>
-        </div>
-      </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
-  </body>
+<body>
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-md bg-body-tertiary">
+		<div class="container-fluid d-flex">
+			<i class="fa-brands fa-instagram me-1" style="font-size: 30px;"></i>
+			<a class="navbar-brand" href="#"><strong>Instagram</strong></a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+				aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
+				<form class="d-flex" role="search">
+					<!-- Button Modal -->
+					<button type="button" class="btn btn-success me-2" data-bs-toggle="modal"
+						data-bs-target="#staticBackdrop">
+						Create a new post
+					</button>
+
+					<!-- Modal -->
+					<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+						tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5" id="staticBackdropLabel">Create a new post</h1>
+									<button type="button" class="btn-close" data-bs-dismiss="modal"
+										aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<div class="mb-3">
+										<label for="exampleFormControlTextarea1"
+											class="form-label"><strong>Caption:</strong></label>
+										<textarea class="form-control" id="exampleFormControlTextarea1"
+											placeholder="Add the caption of your post here" rows="3"></textarea>
+									</div>
+									<div class="d-flex gap-2">
+										<button type="button" class="btn btn-outline-secondary text-dark">
+											<i class="fa-solid fa-camera"></i>
+										</button>
+										<button type="button" class="btn btn-outline-secondary text-dark">
+											<i class="fa-solid fa-location-dot"></i>
+										</button>
+
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary"
+										data-bs-dismiss="modal">Close</button>
+									<button type="button" class="btn btn-success">Publish</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Dropdown -->
+					<div class="dropdown-center">
+						<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+							aria-expanded="false">
+							<i class="fa-solid fa-gear"></i>
+						</button>
+						<ul class="dropdown-menu dropdown-menu-end">
+							<li><a class="dropdown-item" href="#">Profile</a></li>
+							<li><a class="dropdown-item" href="#">Accesibility</a></li>
+							<li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+						</ul>
+					</div>
+				</form>
+			</div>
+		</div>
+	</nav>
+	<!-- Nav-Tab -->
+	<nav>
+		<div class="nav nav-tabs justify-content-center border-0" id="nav-tab" role="tablist">
+			<button class="nav-link active border-0" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+				type="button" role="tab" aria-controls="nav-home" aria-selected="true"><i
+					class="fas fa-th"></i></button>
+			<button class="nav-link border-0" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+				type="button" role="tab" aria-controls="nav-profile" aria-selected="false" ;><i
+					class="fa-solid fa-square"></i></button>
+		</div>
+	</nav>
+	<!-- PHOTO GRID -->
+	<div class="tab-content" id="nav-tabContent">
+		<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab"
+			tabindex="0">
+			<div class="container">
+				<div class="row g-1 mb-1">
+					<div class="col-sm-6 col-md-4">
+						<div class="ratio ratio-1x1">
+							<img src="https://royalsperfume.es/cdn/shop/files/61aDAbBVv6L._SL1500.jpg?v=1747650702"
+								alt="" class="w-100 h-100 object-fit-cover">
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<div class="ratio ratio-1x1">
+							<img src="https://olfactoryambition.com/wp-content/uploads/2024/02/valentino-uomo-born-in-roma-intense-65bb8856b7e22.webp"
+								alt="" class="w-100 h-100 object-fit-cover">
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<div class="ratio ratio-1x1">
+							<img src="https://static3.sabinacdn.com/50184-thickbox_default/le-beau-paradise-garden-eau-de-parfum-jean-paul-gaultier.jpg"
+								alt="" class="w-100 h-100 object-fit-cover">
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<div class="ratio ratio-1x1">
+							<img src="https://dutyfreemelilla.com/image/cache/catalog/fotosTmp/1571667-1067x1024.jpg"
+								alt="" class="w-100 h-100 object-fit-cover">
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<div class="ratio ratio-1x1">
+							<img src="https://i1.perfumesclub.com/grande/193643-2.jpg" alt=""
+								class="w-100 h-100 object-fit-cover">
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<div class="ratio ratio-1x1">
+							<img src="https://i1.perfumesclub.com/grande/161136-2.jpg" alt=""
+								class="w-100 h-100 object-fit-cover">
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<div class="ratio ratio-1x1">
+							<img src="https://mimadaconsentida.com/wp-content/uploads/2025/02/a522d008-3270-406b-82f4-f186dfb24dee.jpeg"
+								alt="" class="w-100 h-100 object-fit-cover">
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<div class="ratio ratio-1x1">
+							<img src="https://img2.miravia.es/g/fb/kf/E659afdd10a4c4e7da79541554ab745e5i.jpg_360x360q75.jpg"
+								alt="" class="w-100 h-100 object-fit-cover">
+						</div>
+					</div>
+					<div class="col-sm-6 col-md-4">
+						<div class="ratio ratio-1x1">
+							<img src="https://fraganzi.com/cdn/shop/files/odysseymandarynskyarmaf100ml.png?v=1743781336"
+								alt="" class="w-100 h-100 object-fit-cover">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Cards -->
+		<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+			<div class="container">
+				<div class="card mx-auto mb-3" style="width: 25rem;">
+					<div class="card-header d-flex justify-content-between">
+						<h5 class="card-title">Vulcan Feu</h5>
+						<p class="">07/06/25</p>
+					</div>
+					<img src="https://royalsperfume.es/cdn/shop/files/61aDAbBVv6L._SL1500.jpg?v=1747650702"
+						class="card-img-top" alt="...">
+					<div class="card-body">
+						<p class="card-text">Liked by <strong>Harry Potter</strong> and<strong> 1.000.000
+								others.</strong></p>
+						<p>Vulcan Feu de French Avenue es una fragancia unisex intensa y vibrante, clasificada como
+							floral, que combina notas afrutadas, especiadas y amaderadas. Se inspira en la energía de
+							una erupción volcánica, ofreciendo un aroma tropical, especiado y amaderado. Es una
+							fragancia sofisticada y envolvente, ideal para personas que buscan destacar con un aroma
+							audaz. </p>
+					</div>
+				</div>
+				<div class="card mx-auto mb-3" style="width: 25rem;">
+					<div class="card-header d-flex justify-content-between">
+						<h5 class="card-title">Valentino Born in Roma</h5>
+						<p class="">06/06/25</p>
+					</div>
+					<img src="https://olfactoryambition.com/wp-content/uploads/2024/02/valentino-uomo-born-in-roma-intense-65bb8856b7e22.webp"
+						class="card-img-top" alt="...">
+					<div class="card-body">
+						<p class="card-text">Liked by <strong>Rambo</strong> and<strong> 700.000 others.</strong></p>
+						<p>Valentino Born in Roma Uomo es una fragancia amaderada aromática para hombres que evoca la
+							elegancia de Roma, combinando notas profundas y dulces con toques frescos y picantes. La
+							fragancia se caracteriza por la combinación de vetiver, salvia y jengibre, con toques de
+							bergamota y violeta. </p>
+					</div>
+				</div>
+				<div class="card mx-auto" style="width: 25rem;">
+					<div class="card-header d-flex justify-content-between">
+						<h5 class="card-title">Paradise Garden</h5>
+						<p class="">05/06/25</p>
+					</div>
+					<img src="https://i1.perfumesclub.com/grande/193643-2.jpg" class="card-img-top" alt="...">
+					<div class="card-body">
+						<p class="card-text">Liked by <strong>Tarantino</strong> and <strong> 950.000 others.</strong>
+						</p>
+						<p>Fragancia sofisticada, floral-exótica, con frescura vibrante y elegancia amaderada duradera.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+		crossorigin="anonymous"></script>
+</body>
+
 </html>
